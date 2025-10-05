@@ -1,7 +1,4 @@
-import models.Card
-import models.Rank
-import models.Suit
-import models.findHandScore
+import models.*
 
 /*
     TODO: 1: Lag en Card klasse. Skal inneholde suit (diamonds (D), hearts (H) clubs (C) and spades (S)) og value (2-10, J, Q, K, A)
@@ -12,6 +9,7 @@ import models.findHandScore
 */
 
 fun main() {
+    /*
     val card1 = Card(Suit.CLUBS, Rank.KING)
     val card2 = Card(Suit.CLUBS, Rank.QUEEN)
     val card3 = Card(Suit.CLUBS, Rank.JACK)
@@ -20,8 +18,15 @@ fun main() {
 
     val hand = listOf(card2, card3, card4, card5, card1)
 
-    findHandScore(hand)
-
     println("$card1 is higher then $card2: ${card1 > card2}")
     println("$card1 is lowe then $card2: ${card1 < card2}")
+
+
+     */
+
+    val deck = standard52Deck()
+    val result = dealHands(deck = deck, animate = true, delayMs = 500L)
+    result.hands.forEachIndexed { i, hand -> println("Final hand H${i + 1}: ${createDeckSnapshot(hand)}") }
 }
+
+
