@@ -1,6 +1,4 @@
-package models
-
-//TODO: 1: Lag en Card klasse. Skal inneholde suit (diamonds (D), hearts (H) clubs (C) and spades (S)) og value (2-10, J, Q, K, A)
+package domain
 enum class Suit{
     DIAMOND,
     HEART,

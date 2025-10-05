@@ -1,8 +1,9 @@
 package unit.models.deck
 
-import models.*
+import domain.*
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*
+import services.Dealer
 
 @DisplayName("DealHandsUnitTest()")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores::class)
@@ -22,7 +23,7 @@ class DealHandsUnitTest {
     @DisplayName("dealHandsResult_withTooFewHands_shouldFail()")
     fun dealHandsResult_withTooFewHands_shouldFail() {
         // Setup
-        val result = dealHandsResult(deck = deck, numHands = 0, animate = false)
+        val result = Dealer.deal(deck = deck, numHands = 0, animate = false)
 
         // Assertion
         assertTrue(result.isFailure)
@@ -33,7 +34,7 @@ class DealHandsUnitTest {
     @DisplayName("dealHandsResult_withTooSmallHandSize_shouldFail()")
     fun dealHandsResult_withTooSmallHandSize_shouldFail() {
         // Setup
-        val result =  dealHandsResult(deck = deck, handSize = 0, animate = false)
+        val result = Dealer.deal(deck = deck, handSize = 0, animate = false)
 
         // Assertion
         assertTrue(result.isFailure)
@@ -44,7 +45,7 @@ class DealHandsUnitTest {
     fun dealHandsResult_withTooSmallDeck__ShouldFail() {
         // Setup
         val tooSmallDeck = deck.take(9) // need at least 10 for 2 hands of 5
-        val result = dealHandsResult(deck = tooSmallDeck, numHands = 2, handSize = 5, animate = false)
+        val result = Dealer.deal(deck = tooSmallDeck, numHands = 2, handSize = 5, animate = false)
 
         // Assertion
         assertTrue(result.isFailure)
@@ -55,7 +56,7 @@ class DealHandsUnitTest {
     @DisplayName("dealHandsResult_withTooSmallDeck__ShouldSucceed()")
     fun dealHandsResult_withTooSmallDeck__ShouldSucceed(){
         // Setup
-        val result = dealHandsResult(deck = deck, numHands = 2, handSize = 5, animate = false)
+        val result = Dealer.deal(deck = deck, numHands = 2, handSize = 5, animate = false)
 
         // Assertion
         assertTrue(result.isSuccess)

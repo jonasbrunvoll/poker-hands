@@ -1,8 +1,8 @@
 package unit.models.hand
 
-import models.*
+import domain.*
 import org.junit.jupiter.api.*
-import org.junit.jupiter.api.Assertions.*
+import services.HandEvaluator
 
 @DisplayName("findHandScore()")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores::class)
@@ -31,7 +31,7 @@ class FindHandScoreUnitTest {
         )
 
         assertThrows<IllegalArgumentException> {
-            findHandScore(fourCards)
+            HandEvaluator.evaluate(fourCards)
         }
     }
 }
