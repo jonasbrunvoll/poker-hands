@@ -22,10 +22,6 @@ fun main() {
 
     findHandScore(hand)
 
-
     println("$card1 is higher then $card2: ${card1 > card2}")
     println("$card1 is lowe then $card2: ${card1 < card2}")
-
-
-
 }
