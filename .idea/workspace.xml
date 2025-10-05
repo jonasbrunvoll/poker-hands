@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf00402-55d3-434a-823b-b2eee928bf71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/services/Dealer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/services/HandEvaluator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/Card.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/Deck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/Deck.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/Hand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/Hand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/models/deck/DealHandsUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/models/deck/DealHandsUnitTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/models/hand/FindHandScoreUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/models/hand/FindHandScoreUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/Hand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/Hand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/services/Dealer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/services/Dealer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/services/HandEvaluator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/services/HandEvaluator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/models/deck/DealHandsUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/services/deck/DealHandsUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/models/hand/FindHandScoreUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/services/hand/FindHandScoreUnitTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
       <recent name="unit.models.hand" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'poker-hands.test'">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="DealHandsUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -179,10 +177,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.Tests in 'poker-hands.test'" />
         <item itemvalue="Gradle.FindHandScoreUnitTest.throws_if_not_exactly_five_cards (1)" />
         <item itemvalue="Gradle.DealHandsUnitTest" />
-        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.DealHandsUnitTest.throws_when_deck_is_too_small" />
       </list>
     </recent_temporary>

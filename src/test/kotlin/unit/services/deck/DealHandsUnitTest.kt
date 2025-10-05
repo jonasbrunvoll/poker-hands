@@ -1,4 +1,4 @@
-package unit.models.deck
+package unit.services.deck
 
 import domain.*
 import org.junit.jupiter.api.*

@@ -12,6 +12,8 @@ enum class HandCategory(val strength: Int) {
 }
 
 data class Hand(
+    val handNumber: Int?,
+    val cards: List<Card>,
     val handCategory: HandCategory,
-    val cards: List<Card>
+    val tiebreakers: List<Int>,
 )

@@ -5,10 +5,8 @@ import kotlin.random.Random
 
 data class DealResult(
     val hands: List<List<Card>>,
-    val remainingDeck: List<Card>
 )
 object Dealer {
-
     fun deal(
         deck: List<Card>,
         numHands: Int = 2,
@@ -47,9 +45,7 @@ object Dealer {
             }
         }
 
-        val remaining = shuffledDeck.drop(neededCards)
-
-        return Result.success(DealResult(hands.map { it.toList() }, remaining))
+        return Result.success(DealResult(hands.map { it.toList() }))
     }
 
 }
