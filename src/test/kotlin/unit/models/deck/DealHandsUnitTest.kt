@@ -19,29 +19,45 @@ class DealHandsUnitTest {
     }
 
     @Test
-    @DisplayName("throws when less than one hand is specified (numHands = 0)")
-    fun requiresAtLeastOneHand__shouldFail() {
-        val ex = assertThrows(IllegalArgumentException::class.java) {
-            dealHands(deck = deck, numHands = 0, animate = false)
-        }
-        assertEquals("numHands must be >= 1", ex.message)
+    @DisplayName("dealHandsResult_withTooFewHands_shouldFail()")
+    fun dealHandsResult_withTooFewHands_shouldFail() {
+        // Setup
+        val result = dealHandsResult(deck = deck, numHands = 0, animate = false)
+
+        // Assertion
+        assertTrue(result.isFailure)
+        assertTrue(result.exceptionOrNull() is IllegalArgumentException)
     }
 
     @Test
-    @DisplayName("throws when hand size is less than one (handSize = 0)")
-    fun requiresHandSizeOfAtLeastOne__shouldFail() {
-        val ex = assertThrows(IllegalArgumentException::class.java) {
-            dealHands(deck = deck, handSize = 0, animate = false)
-        }
-        assertEquals("handSize must be >= 1", ex.message)
+    @DisplayName("dealHandsResult_withTooSmallHandSize_shouldFail()")
+    fun dealHandsResult_withTooSmallHandSize_shouldFail() {
+        // Setup
+        val result =  dealHandsResult(deck = deck, handSize = 0, animate = false)
+
+        // Assertion
+        assertTrue(result.isFailure)
+        assertTrue(result.exceptionOrNull() is IllegalArgumentException)
     }
     @Test
-    @DisplayName("throws when the deck is too small for the requested hands")
-    fun throws_when_deck_is_too_small() {
+    @DisplayName("dealHandsResult_withTooSmallDeck__ShouldFail()")
+    fun dealHandsResult_withTooSmallDeck__ShouldFail() {
+        // Setup
         val tooSmallDeck = deck.take(9) // need at least 10 for 2 hands of 5
-        val ex = assertThrows(IllegalArgumentException::class.java) {
-            dealHands(deck = tooSmallDeck, numHands = 2, handSize = 5, animate = false)
-        }
-        assertTrue(ex.message!!.contains("Need at least 10 cards"))
+        val result = dealHandsResult(deck = tooSmallDeck, numHands = 2, handSize = 5, animate = false)
+
+        // Assertion
+        assertTrue(result.isFailure)
+        assertTrue(result.exceptionOrNull() is IllegalArgumentException)
+    }
+
+    @Test
+    @DisplayName("dealHandsResult_withTooSmallDeck__ShouldSucceed()")
+    fun dealHandsResult_withTooSmallDeck__ShouldSucceed(){
+        // Setup
+        val result = dealHandsResult(deck = deck, numHands = 2, handSize = 5, animate = false)
+
+        // Assertion
+        assertTrue(result.isSuccess)
     }
 }

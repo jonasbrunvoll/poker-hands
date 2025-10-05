@@ -1,4 +1,4 @@
-package unit.models
+package unit.models.hand
 
 import models.*
 import org.junit.jupiter.api.*
@@ -30,9 +30,8 @@ class FindHandScoreUnitTest {
             Card(Suit.CLUBS, Rank.TEN),
         )
 
-        val ex = assertThrows(IllegalArgumentException::class.java) {
+        assertThrows<IllegalArgumentException> {
             findHandScore(fourCards)
         }
-        assertTrue(ex.message!!.contains("Expected exactly 5 cards. Currently, ${fourCards.size} are provided"))
     }
 }

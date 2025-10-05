@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf00402-55d3-434a-823b-b2eee928bf71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/Deck.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/Card.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/Deck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/Deck.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/Hand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/Hand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/models/deck/DealHandsUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/models/deck/DealHandsUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/models/hand/FindHandScoreUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/models/hand/FindHandScoreUnitTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +22,21 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -55,8 +68,59 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="unit.models.hand" />
+    </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Gradle.DealHandsUnitTest">
+    <configuration name="DealHandsUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;unit.models.deck.DealHandsUnitTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="DealHandsUnitTest.throws_when_deck_is_too_small" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;unit.models.deck.DealHandsUnitTest.throws_when_deck_is_too_small&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="FindHandScoreUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -81,7 +145,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="FindHandScoreUnitTest.throws if not exactly five cards" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FindHandScoreUnitTest.throws_if_not_exactly_five_cards (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -94,31 +158,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;unit.models.FindHandScoreUnitTest.throws if not exactly five cards&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="FindHandScoreUnitTest.throws_if_not_exactly_five_cards" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;unit.models.FindHandScoreUnitTest.throws_if_not_exactly_five_cards&quot;" />
+            <option value="&quot;unit.models.hand.FindHandScoreUnitTest.throws_if_not_exactly_five_cards&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -138,10 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DealHandsUnitTest" />
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.DealHandsUnitTest.throws_when_deck_is_too_small" />
+        <item itemvalue="Gradle.FindHandScoreUnitTest.throws_if_not_exactly_five_cards (1)" />
         <item itemvalue="Gradle.FindHandScoreUnitTest" />
-        <item itemvalue="Gradle.FindHandScoreUnitTest.throws_if_not_exactly_five_cards" />
-        <item itemvalue="Gradle.FindHandScoreUnitTest.throws if not exactly five cards" />
       </list>
     </recent_temporary>
   </component>

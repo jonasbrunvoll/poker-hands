@@ -25,8 +25,19 @@ fun main() {
      */
 
     val deck = standard52Deck()
-    val result = dealHands(deck = deck, animate = true, delayMs = 500L)
-    result.hands.forEachIndexed { i, hand -> println("Final hand H${i + 1}: ${createDeckSnapshot(hand)}") }
+    val result = dealHandsResult(deck = deck, animate = true, delayMs = 500L)
+
+    result.fold(
+        onSuccess = {(hands, remaining) ->
+            hands.forEachIndexed { index, hand ->
+                println("Final hand H${index + 1}: ${createDeckSnapshot(hand)}")
+            }
+            println("Remaining number of cards in deck: ${remaining.size}")
+        },
+        onFailure = { e ->
+            println("Deal failed: ${e.message}")
+        }
+    )
 }
 
 

@@ -17,12 +17,12 @@ data class HandScore(
 )
 
 
-fun findHandScore(cards: List<Card>) : HandScore {
-    require(cards.size == 5) {"Expected exactly 5 cards. Currently, ${cards.size} are provided"}
+fun findHandScore(cards: List<Card>) : Result<HandScore> {
+    //require(cards.size == 5) {"Expected exactly 5 cards. Currently, ${cards.size} are provided"}
     val sortedCards = cards.sortedByDescending { it.rank.value }
 
     println(sortedCards)
 
     // For avoiding build error
-    return HandScore(HandCategory.FOUR_OF_A_KIND, cards)
+    return Result.success(HandScore(HandCategory.FOUR_OF_A_KIND, cards))
 }
