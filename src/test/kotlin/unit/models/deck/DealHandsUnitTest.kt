@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions.*
 
 @DisplayName("DealHandsUnitTest()")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores::class)
-@TestInstance(TestInstance.Lifecycle.PER_CLASS) // allows non-static @BeforeAll in Kotlin
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @Tag("unit")
 class DealHandsUnitTest {
 
