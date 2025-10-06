@@ -8,8 +8,13 @@ Dette prosjektet kan kjøres gjennom terminalen eller gjennom din foretrukne IDE
 
 ##### Kjøre alle tester (terminal)
 ```
+# Kjør tester
 cd poker-hands
 ./gradlew test
+
+
+# Tving ny kjøring av tester
+./gradlew cleanTest test
 ```
 
 ##### Kjøre main (terminal)
