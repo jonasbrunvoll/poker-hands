@@ -41,10 +41,7 @@ enum class Rank(val value: Int, val symbol: String) {
 data class Card(
     val suit: Suit,
     val rank: Rank
-) : Comparable<Card> {
-    override fun compareTo(other: Card): Int {
-        return this.rank.value.compareTo(other.rank.value)
-    }
+) {
     override fun toString(): String {
         val suitSymbol = when (suit) {
             Suit.DIAMOND -> "♦"

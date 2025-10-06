@@ -1,6 +1,7 @@
 package services
 
 import domain.Card
+import domain.Deck
 import kotlin.random.Random
 
 data class DealResult(
@@ -8,7 +9,7 @@ data class DealResult(
 )
 object Dealer {
     fun deal(
-        deck: List<Card>,
+        deck: Deck,
         numHands: Int = 2,
         handSize: Int = 5,
         animate: Boolean = false,
@@ -21,8 +22,6 @@ object Dealer {
         if (deck.size < neededCards) {
             return Result.failure(IllegalArgumentException("Need at least $neededCards cards, but deck has ${deck.size}"))
         }
-
-        println("Dealing round-robin to $numHands hand(s), $handSize card(s) each:")
 
         val shuffledDeck = deck.shuffled(Random.Default)
         val hands = List(numHands) { mutableListOf<Card>() }

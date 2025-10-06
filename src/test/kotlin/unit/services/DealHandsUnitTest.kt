@@ -1,11 +1,11 @@
-package unit.services.deck
+package unit.services
 
 import domain.*
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*
 import services.Dealer
 
-@DisplayName("DealHandsUnitTest()")
+@DisplayName("DealerUnitTest()")
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores::class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @Tag("unit")
@@ -20,8 +20,8 @@ class DealHandsUnitTest {
     }
 
     @Test
-    @DisplayName("dealHandsResult_withTooFewHands_shouldFail()")
-    fun dealHandsResult_withTooFewHands_shouldFail() {
+    @DisplayName("deal_withTooFewHands_shouldFail()")
+    fun dealt_withTooFewHands_shouldFail() {
         // Setup
         val result = Dealer.deal(deck = deck, numHands = 0, animate = false)
 
@@ -31,8 +31,8 @@ class DealHandsUnitTest {
     }
 
     @Test
-    @DisplayName("dealHandsResult_withTooSmallHandSize_shouldFail()")
-    fun dealHandsResult_withTooSmallHandSize_shouldFail() {
+    @DisplayName("deal_withTooSmallHandSize_shouldFail()")
+    fun deal_withTooSmallHandSize_shouldFail() {
         // Setup
         val result = Dealer.deal(deck = deck, handSize = 0, animate = false)
 
@@ -41,8 +41,8 @@ class DealHandsUnitTest {
         assertTrue(result.exceptionOrNull() is IllegalArgumentException)
     }
     @Test
-    @DisplayName("dealHandsResult_withTooSmallDeck__ShouldFail()")
-    fun dealHandsResult_withTooSmallDeck__ShouldFail() {
+    @DisplayName("deal_withTooSmallDeck__ShouldFail()")
+    fun deal_withTooSmallDeck__ShouldFail() {
         // Setup
         val tooSmallDeck = deck.take(9) // need at least 10 for 2 hands of 5
         val result = Dealer.deal(deck = tooSmallDeck, numHands = 2, handSize = 5, animate = false)
@@ -53,8 +53,8 @@ class DealHandsUnitTest {
     }
 
     @Test
-    @DisplayName("dealHandsResult_withTooSmallDeck__ShouldSucceed()")
-    fun dealHandsResult_withTooSmallDeck__ShouldSucceed(){
+    @DisplayName("deal_withTooSmallDeck__ShouldSucceed()")
+    fun deal_withTooSmallDeck__ShouldSucceed(){
         // Setup
         val result = Dealer.deal(deck = deck, numHands = 2, handSize = 5, animate = false)
 

@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf00402-55d3-434a-823b-b2eee928bf71" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/EvaluationHelpers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/unit/utils/EvaluationHelperUnitTests.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/Card.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/Card.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/Hand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/Hand.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/services/Dealer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/services/Dealer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/services/HandEvaluator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/services/HandEvaluator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/models/deck/DealHandsUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/services/deck/DealHandsUnitTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/models/hand/FindHandScoreUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/services/hand/FindHandScoreUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/services/deck/DealHandsUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/services/DealHandsUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/unit/services/hand/FindHandScoreUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/unit/services/HandEvaluatorUnitTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -66,15 +70,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/utils" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/services" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="unit.services" />
       <recent name="unit.models.hand" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
-    <configuration name="DealHandsUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'poker-hands.test'">
+    <configuration name="EvaluationHelperUnitTests.cardsByRankDesc_ShouldSucceed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -87,7 +94,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;unit.models.deck.DealHandsUnitTest&quot;" />
+            <option value="&quot;unit.utils.EvaluationHelperUnitTests.cardsByRankDesc_ShouldSucceed&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -98,7 +105,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="DealHandsUnitTest.throws_when_deck_is_too_small" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EvaluationHelperUnitTests.countByRank_ShouldSucceed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -111,7 +118,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;unit.models.deck.DealHandsUnitTest.throws_when_deck_is_too_small&quot;" />
+            <option value="&quot;unit.utils.EvaluationHelperUnitTests.countByRank_ShouldSucceed&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -122,7 +129,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="FindHandScoreUnitTest.throws_if_not_exactly_five_cards (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EvaluationHelperUnitTests.isFlush_ShouldFail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -135,7 +142,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;unit.models.hand.FindHandScoreUnitTest.throws_if_not_exactly_five_cards&quot;" />
+            <option value="&quot;unit.utils.EvaluationHelperUnitTests.isFlush_ShouldFail&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="EvaluationHelperUnitTests.ranksByCountThenRankDesc_ShouldSucceed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;unit.utils.EvaluationHelperUnitTests.ranksByCountThenRankDesc_ShouldSucceed&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -168,20 +199,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <module name="poker-hands.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.Tests in 'poker-hands.test'" />
-        <item itemvalue="Gradle.FindHandScoreUnitTest.throws_if_not_exactly_five_cards (1)" />
-        <item itemvalue="Gradle.DealHandsUnitTest" />
-        <item itemvalue="Gradle.DealHandsUnitTest.throws_when_deck_is_too_small" />
+        <item itemvalue="Gradle.EvaluationHelperUnitTests.isFlush_ShouldFail" />
+        <item itemvalue="Gradle.EvaluationHelperUnitTests.ranksByCountThenRankDesc_ShouldSucceed" />
+        <item itemvalue="Gradle.EvaluationHelperUnitTests.countByRank_ShouldSucceed" />
+        <item itemvalue="Gradle.EvaluationHelperUnitTests.cardsByRankDesc_ShouldSucceed" />
       </list>
     </recent_temporary>
   </component>
